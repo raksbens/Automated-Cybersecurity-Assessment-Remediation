@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Select Service</title>
+</head>
+<body>
+    <h1>Select Service</h1>
+    <form method="post">
+        <label for="service">Select Service:</label>
+        <select name="service" id="service">
+            {% for service in services %}
+                <option value="{{ service }}">{{ service }}</option>
+            {% endfor %}
+        </select>
+        <button type="submit">Next</button>
+    </form>    
+</body>
+</html>

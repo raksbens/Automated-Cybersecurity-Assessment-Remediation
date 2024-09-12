@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Select Destination Address</title>
+</head>
+<body>
+    <h1>Select Destination Address</h1>
+    <form method="post">
+        <label for="dst_addr">Select Destination Address:</label>
+        <select name="dst_addr" id="dst_addr">
+            {% for ip in ip_addresses %}
+                <option value="{{ ip }}">{{ ip }}</option>
+            {% endfor %}
+        </select>
+        <button type="submit">Next</button>
+    </form>
+</body>
+</html>

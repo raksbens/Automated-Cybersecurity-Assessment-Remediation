@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Select Source Address</title>
+</head>
+<body>
+    <h1>Select Source Address</h1>
+    <form method="POST">
+        <label for="src_addr">Source Address:</label>
+        <select name="src_addr" id="src_addr">
+            {% for addr, subnet in ip_addresses %}
+                <option value="{{ addr }}">{{ addr }} ({{ subnet }})</option>
+            {% endfor %}
+        </select>
+        <button type="submit">Next</button>
+    </form>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select Policy</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; padding: 20px; }
+        h1 { color: #333; }
+        select { padding: 5px; font-size: 16px; }
+        button { padding: 10px 20px; font-size: 16px; margin-top: 10px; }
+    </style>
+</head>
+<body>
+    <h1>Select Policy to Remediate</h1>
+    <form method="POST">
+        <label for="policy_id">Choose a Policy:</label>
+        <select name="policy_id" id="policy_id" required>
+            {% for policy in policies %}
+                <option value="{{ policy.policyid }}">{{ policy.name }} (ID: {{ policy.policyid }})</option>
+            {% endfor %}
+        </select>
+        <br>
+        <button type="submit">Next</button>
+    </form>
+</body>
+</html>

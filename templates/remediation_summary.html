@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remediation Summary</title>
+</head>
+<body>
+    <h1>Remediation Summary</h1>
+    <p><strong>Source Address:</strong> {{ src_addr }}</p>
+    <p><strong>Destination Address:</strong> {{ dst_addr }}</p>
+    <p><strong>Service:</strong> {{ service }}</p>
+
+    <form action="{{ url_for('apply_remediation') }}" method="post">
+        <button type="submit">Confirm and Apply Remediation</button>
+    </form>
+</body>
+</html>
